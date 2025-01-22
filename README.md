@@ -1,4 +1,4 @@
-# 🥘 Jelova Cafe Management System Based on Website 🥘
+# 🥘Jelova Cafe Management System Based on Website🥘
 
 ## 🖼️ Project Description 
 **Introduction**
