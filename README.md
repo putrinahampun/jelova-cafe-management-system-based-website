@@ -52,12 +52,12 @@ The Jelova Café & Resto Management Website is designed to replace the manual ma
 - In your local computer, create or choose the folder you want to save the project. Open the gitbash, type this command git clone [paste the link] and paste the copied-link after that. If you can't find the gitbash, then you should download and install git or your computer.
 
 **Running Project**
-- Open the project on your IDE. Copy file .env by using cp.env.example .env (change the copied-file from .env.example to .env). Make sure the name of databases already exists in your database system.
-- Open the terminal section and type this command composer installfor installing the Composer.
-- Type this command php artisan key:generate after you there's no doubt in step one and two.
-- After that, type this command php artisan migrate to migrate the all the table's structures to your database.
-- This project provides a database seeder to give you a data example, so type this command too php artisan db:seed.
-- Finally type this command to run the project php artisan serve.
+- Open the project on your IDE. Copy file .env by using ```cp.env.example .env``` (change the copied-file from .env.example to .env). Make sure the name of databases already exists in your database system.
+- Open the terminal section and type this command ```composer install``` for installing the Composer.
+- Type this command ```php artisan key:generate``` after you there's no doubt in step one and two.
+- After that, type this command ```php artisan migrate``` to migrate the all the table's structures to your database.
+- This project provides a database seeder to give you a data example, so type this command too ```php artisan db:seed```.
+- Finally type this command to run the project ```php artisan serve```.
 - Well done!
 
 ## 🖋️ Additional Comments 
