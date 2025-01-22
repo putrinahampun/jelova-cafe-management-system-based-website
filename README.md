@@ -2,9 +2,11 @@
 
 ## 🖼️ Project Description 
 **Introduction**
+
 The Jelova Café & Resto Management Website is designed to replace the manual management system of Jelova Café & Resto, which has caused inefficiencies such as order errors, delayed service, and cashier overload, especially during busy times. This new system aims to streamline operations by providing an efficient, fast, and accurate service platform, thus enhancing customer experience and improving staff productivity. The website is intended for the café's owner and staff, ensuring smoother order management, reducing confusion in the kitchen, and easing the cashier's workload to deliver optimal service.
 
 **Features**
+
 - **User Registration & Login**
   User registration is used to store new user data, while user login verifies the data of users who have registered through the registration feature. Login verification uses authentication services with the Auth Facades library.
 - **Role Based Access Control (RBAC)**
@@ -13,6 +15,7 @@ The Jelova Café & Resto Management Website is designed to replace the manual ma
   CRUD refers to the technical features for creating, reading, updating, and deleting data in the system. Each role has access to these features based on their specific tasks.
 
 ## ⚙️ Setup 
+
 **Dependencies**
 - Laravel == 8x
 - Composer == 2.0.12
@@ -25,6 +28,7 @@ The Jelova Café & Resto Management Website is designed to replace the manual ma
 - Browser : for showing up the result (using localhost).
   
 ## 🏗️ Database Schema
+
 **Table & Field**
 - Database Name: tubes_imk
 - Total Table: 11 tables
@@ -47,6 +51,7 @@ The Jelova Café & Resto Management Website is designed to replace the manual ma
 ![image](https://github.com/user-attachments/assets/c31d56c6-478d-4eed-a4ac-6c96b025c9d7)
 
 ## 💻 Deployment 
+
 **Cloning Project**
 - Open the project on github, find the HTTPS or SSH button. Choose and press one of them, then copy the link provided.
 - In your local computer, create or choose the folder you want to save the project. Open the gitbash, type this command git clone [paste the link] and paste the copied-link after that. If you can't find the gitbash, then you should download and install git or your computer.
@@ -61,5 +66,6 @@ The Jelova Café & Resto Management Website is designed to replace the manual ma
 - Well done!
 
 ## 🖋️ Additional Comments 
+
 **Future Plans**
 - Improving the databases to be more well-structured.
