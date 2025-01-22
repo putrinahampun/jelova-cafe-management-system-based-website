@@ -1,72 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 🥘 Jelova Cafe Management System Based on Website 🥘
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🖼️ Project Description 
+**Introduction**
+The Jelova Café & Resto Management Website is designed to replace the manual management system of Jelova Café & Resto, which has caused inefficiencies such as order errors, delayed service, and cashier overload, especially during busy times. This new system aims to streamline operations by providing an efficient, fast, and accurate service platform, thus enhancing customer experience and improving staff productivity. The website is intended for the café's owner and staff, ensuring smoother order management, reducing confusion in the kitchen, and easing the cashier's workload to deliver optimal service.
 
-## About Laravel
+**Features**
+- **User Registration & Login**
+  User registration is used to store new user data, while user login verifies the data of users who have registered through the registration feature. Login verification uses authentication services with the Auth Facades library.
+- **Role Based Access Control (RBAC)**
+  Role-Based Access Control refers to a system where different users have specific roles. For this website, there are three roles: Cashier, Waiter, and Kitchen staff. The Cashier is responsible for managing the café's income. The Waiter is responsible for serving customers' orders. The Kitchen staff is responsible for updating the order status, whether it is still being cooked or ready to be served. This feature can be implemented using Middleware from Laravel.
+- **CRUD (Create, Read, Update, & Delete)**
+  CRUD refers to the technical features for creating, reading, updating, and deleting data in the system. Each role has access to these features based on their specific tasks.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ⚙️ Setup 
+**Dependencies**
+- Laravel == 8x
+- Composer == 2.0.12
+- Bootstrap == 3.4.0
+- PHP == 3.4.0
+  
+**Tools**
+- VS CODE : as the IDE (you can use another IDE).
+- XAMPP : software to access MySQL Server for Database.
+- Browser : for showing up the result (using localhost).
+  
+## 🏗️ Database Schema
+**Table & Field**
+- Database Name: tubes_imk
+- Total Table: 11 tables
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+  | Table name | Atributes | Purpose |
+  | ---------- | --------- | ------- |
+  | casirs | id | saving id for role Cassir |
+  | kitchens | id | saving id for role Kitchen |
+  | waiters | id | saving id for role Waiter |
+  | users | id, name, email, password, role, avatar(image) | saving users data |
+  | drinks | id, drink_name, price | saving drink's menu | 
+  | tables | id, table | saving the number of table |
+  | food | id, food_name, price | saving food's menu |
+  | services | id, services | saving services options (dining, take away) |
+  | price_sums | id, food_order, drink_order | saving the total of food's and drink's price |
+  | drink_orders | id, table_no, drink_order, drink_portion, services, status | saving drink's order data |
+  | food_orders | id, table_no, food_order, food_portion, services, status | saving food's order data | 
+ 
+**Entity Relationship Diagram**
+![image](https://github.com/user-attachments/assets/c31d56c6-478d-4eed-a4ac-6c96b025c9d7)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 💻 Deployment 
+**Cloning Project**
+- Open the project on github, find the HTTPS or SSH button. Choose and press one of them, then copy the link provided.
+- In your local computer, create or choose the folder you want to save the project. Open the gitbash, type this command git clone [paste the link] and paste the copied-link after that. If you can't find the gitbash, then you should download and install git or your computer.
 
-## Learning Laravel
+**Running Project**
+- Open the project on your IDE. Copy file .env by using cp.env.example .env (change the copied-file from .env.example to .env). Make sure the name of databases already exists in your database system.
+- Open the terminal section and type this command composer installfor installing the Composer.
+- Type this command php artisan key:generate after you there's no doubt in step one and two.
+- After that, type this command php artisan migrate to migrate the all the table's structures to your database.
+- This project provides a database seeder to give you a data example, so type this command too php artisan db:seed.
+- Finally type this command to run the project php artisan serve.
+- Well done!
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# tubes-imk" 
-# tubes-imk.io
-# tubes_IMK.io
-# kelompok8-tubes-imk.io
-# kelompok-8-tubes-imk.io
-# kelompok-8-tubes-imk.io
-"# manajemen-cafe" 
+## 🖋️ Additional Comments 
+**Future Plans**
+- Improving the databases to be more well-structured.
